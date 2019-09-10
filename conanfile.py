@@ -15,12 +15,12 @@ class HelloConan(ConanFile):
 
 	def build(self):
 		cmake = CMake(self)
-		//cmake.configure(source_folder="hello")
+		#cmake.configure(source_folder="hello")
 		cmake.configure(source_folder=".")
 		cmake.build()
 
 	def package(self):
-		//self.copy("*.h", dst="include", src="hello")
+		#self.copy("*.h", dst="include", src="hello")
 		self.copy("*.h", dst="include", src=".")
 		self.copy("*.lib", dst="lib", keep_path=False)
 		self.copy("*.dll", dst="bin", keep_path=False)
